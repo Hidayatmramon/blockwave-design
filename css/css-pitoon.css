@@ -554,6 +554,26 @@ ul {
   display: inline-block;
 }
 
+/* Efek hover untuk card */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Mengangkat card sedikit */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan saat hover */
+}
+
+/* Menambahkan sedikit efek hover pada gambar card */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+}
+
+
 
 
 /*--------------------------------------------------------------

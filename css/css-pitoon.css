@@ -259,9 +259,9 @@ ul {
   z-index: -1;
 }
 
-.owl-with-shadow .owl-stage-outer {
+/* .owl-with-shadow .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .owl-with-shadow .owl-item {
   opacity: 0;
@@ -553,6 +553,26 @@ ul {
   position: relative;
   display: inline-block;
 }
+
+/* Efek hover untuk card */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Mengangkat card sedikit */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan saat hover */
+}
+
+/* Menambahkan sedikit efek hover pada gambar card */
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+}
+
 
 
 
@@ -3161,9 +3181,9 @@ ul {
   background-color: var(--pitoon-base);
 }
 
-.services-one__carousel.owl-carousel .owl-stage-outer {
+/* .services-one__carousel.owl-carousel .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .services-one__carousel.owl-carousel .owl-item {
   opacity: 0;
@@ -4912,9 +4932,9 @@ ul {
   display: none;
 }
 
-.project-one__carousel.owl-carousel .owl-stage-outer {
+/* .project-one__carousel.owl-carousel .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .project-one__carousel.owl-carousel .owl-item {
   opacity: 0;
@@ -5063,9 +5083,9 @@ ul {
   width: auto;
 }
 
-.testimonial-one__carousel.owl-carousel .owl-stage-outer {
+/* .testimonial-one__carousel.owl-carousel .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .testimonial-one__carousel.owl-carousel .owl-item {
   opacity: 0;
@@ -6536,9 +6556,9 @@ ul {
   display: block;
 }
 
-.project-two__carousel.owl-carousel .owl-stage-outer {
+/* .project-two__carousel.owl-carousel .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .project-two__single {
   position: relative;
@@ -7184,9 +7204,9 @@ ul {
   margin: 0 auto;
 }
 
-.testimonial-two__thumb-carousel.owl-carousel .owl-stage-outer {
+/* .testimonial-two__thumb-carousel.owl-carousel .owl-stage-outer {
   overflow: visible;
-}
+} */
 
 .testimonial-two__thumb-carousel .owl-item {
   position: relative;
@@ -15918,3 +15938,4 @@ body.boxed-wrapper {
   background-color: #fff;
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
 }
+

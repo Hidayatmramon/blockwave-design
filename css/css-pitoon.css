@@ -96,9 +96,10 @@
   --pitoon-gray-rgb: 117, 122, 123;
   --pitoon-white: #ffffff;
   --pitoon-white-rgb: 255, 255, 255;
-  --pitoon-base: #f9be17;
+  --pitoon-base: #f9b338;
+  /* --pitoon-base: #00b3ff; */
   --pitoon-base-rgb: 249, 190, 23;
-  --pitoon-black: #04171a;
+  --pitoon-black: #000000;
   --pitoon-black-rgb: 4, 23, 26;
   --pitoon-primary: #f5f3ee;
   --pitoon-primary-rgb: 245, 243, 238;
@@ -556,21 +557,21 @@ ul {
 
 /* Efek hover untuk card */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Mengangkat card sedikit */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan saat hover */
+    transform: translateY(-10px); /* Mengangkat card sedikit */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan saat hover */
 }
 
 /* Menambahkan sedikit efek hover pada gambar card */
 .card-img-top {
-  transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .card:hover .card-img-top {
-  transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
+    transform: scale(1.05); /* Membesarkan gambar sedikit saat hover */
 }
 
 
@@ -1699,7 +1700,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 1px 0px 0px rgba(255, 5, 5, 0.1);
   padding: 0 60px 0;
 }
 
@@ -2552,7 +2553,7 @@ ul {
 }
 
 .main-slider-two .item {
-  background-color: var(--pitoon-black);
+  /* background-color: var(--pitoon-black); */
   position: relative;
   padding-top: 263px;
   padding-bottom: 172px;
@@ -2579,9 +2580,9 @@ ul {
   bottom: 0;
   left: 0;
   width: 85.9%;
-  background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%);
-  background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%);
-  background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%);
+  /* background-image: -moz-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%); */
+  /* background-image: -webkit-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%); */
+  /* background-image: -ms-linear-gradient(0deg, rgb(4, 23, 26) 0%, rgba(4, 23, 26, 0) 100%); */
   z-index: -1;
 }
 

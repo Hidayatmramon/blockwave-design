@@ -2808,13 +2808,13 @@ ul {
 }
 .main-slider-two__wave {
   position: absolute;
-  top: 77%;
+  bottom: 0; /* Ganti dari top ke bottom */
   left: 0;
   width: 100%;
   z-index: 2;
-  transform: translateY(-24%); 
-  /* Menempatkan wave di atas gambar slider */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Menambahkan shadow */
+  transform: translateY(0); /* Reset transform */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25); /* Shadow ke atas */
+  pointer-events: none; /* Biar tidak ganggu klik */
 }
 
 .main-slider-two__wave svg {
@@ -2823,13 +2823,25 @@ ul {
   height: auto;
 }
 
-/* Responsif untuk ukuran layar lebih kecil */
-@media (max-width: 768px) {
+/* Responsif */
+@media (max-width: 1024px) {
   .main-slider-two__wave {
-    top: 80%; /* Menyesuaikan posisi pada layar kecil */
-    transform: translateY(-20%); /* Menyesuaikan dengan ukuran layar */
+    bottom: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .main-slider-two__wave {
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-slider-two__wave {
+    bottom: 0;
+  }
+}
+
 
 
 

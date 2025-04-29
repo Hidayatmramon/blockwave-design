@@ -2806,6 +2806,32 @@ ul {
   border: 2px solid var(--pitoon-white);
   opacity: 1;
 }
+.main-slider-two__wave {
+  position: absolute;
+  top: 77%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transform: translateY(-24%); 
+  /* Menempatkan wave di atas gambar slider */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Menambahkan shadow */
+}
+
+.main-slider-two__wave svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+  .main-slider-two__wave {
+    top: 80%; /* Menyesuaikan posisi pada layar kecil */
+    transform: translateY(-20%); /* Menyesuaikan dengan ukuran layar */
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Main Slider Three

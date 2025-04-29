@@ -2550,6 +2550,7 @@ ul {
   position: relative;
   background-color: var(--pitoon-black);
   z-index: 10;
+  overflow: hidden;
 }
 
 .main-slider-two .item {
@@ -2806,16 +2807,18 @@ ul {
   border: 2px solid var(--pitoon-white);
   opacity: 1;
 }
+
 .main-slider-two__wave {
   position: absolute;
-  bottom: 0; /* Ganti dari top ke bottom */
+  bottom: 0;
+  top: 65%;
   left: 0;
   width: 100%;
   z-index: 2;
-  transform: translateY(0); /* Reset transform */
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25); /* Shadow ke atas */
-  pointer-events: none; /* Biar tidak ganggu klik */
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
 }
+
 
 .main-slider-two__wave svg {
   display: block;
@@ -2823,22 +2826,35 @@ ul {
   height: auto;
 }
 
-/* Responsif */
+/* Responsif medium */
 @media (max-width: 1024px) {
   .main-slider-two__wave {
-    bottom: 0;
+    top: 78%;
+    transform: translateY(-22%);
   }
 }
 
+/* Responsif tablet */
 @media (max-width: 768px) {
   .main-slider-two__wave {
-    bottom: 0;
+    top: 79%;
+    transform: translateY(-20%);
   }
 }
 
+/* Responsif mobile besar */
+@media (max-width: 576px) {
+  .main-slider-two__wave {
+    top: 80%;
+    transform: translateY(-18%);
+  }
+}
+
+/* Responsif mobile kecil */
 @media (max-width: 480px) {
   .main-slider-two__wave {
-    bottom: 0;
+    top: 81%;
+    transform: translateY(-16%);
   }
 }
 

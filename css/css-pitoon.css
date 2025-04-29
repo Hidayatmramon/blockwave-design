@@ -212,6 +212,7 @@ ul {
 .container {
   padding-left: 15px;
   padding-right: 15px;
+  
 }
 
 @media (min-width: 1200px) {
@@ -2661,12 +2662,12 @@ ul {
 
 .main-slider-two__title {
   position: relative;
-  font-size: 100px;
+  font-size: 90px;
   color: var(--pitoon-white);
   font-weight: 600;
   line-height: 100px;
   margin-top: 8px;
-  margin-bottom: 15px;
+  margin-bottom: 100px;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-120px);

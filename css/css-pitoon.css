@@ -2811,7 +2811,8 @@ ul {
 .main-slider-two__wave {
   position: absolute;
   bottom: 0;
-  top: 57%;
+  top: 57%; 
+  /* ss */
   left: 0;
   width: 100%;
   z-index: 2;

@@ -15995,3 +15995,168 @@ body.boxed-wrapper {
   box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, 0.08);
 }
 
+/* item shop*/
+
+.container {
+  max-width: 1500px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 160px;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card span {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.card a {
+  color: #00bfff;
+  font-size: 14px;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.featured {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: white;
+}
+
+.featured .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.featured .overlay h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.featured .overlay a {
+  color: #00ffcc;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .featured {
+    height: 200px;
+  }
+}
+
+/* best selling */
+.best-selling {
+  padding: 40px;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.best-selling__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.best-selling__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.best-selling__card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.best-selling__card:hover {
+  transform: translateY(-5px);
+}
+
+.best-selling__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.best-selling__info {
+  padding: 16px;
+}
+
+.best-selling__name {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.best-selling__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.best-selling__tags span {
+  background-color: #eee;
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+}
+
+.best-selling__tags .sale {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.best-selling__price {
+  font-size: 0.9rem;
+}
+
+.best-selling__old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 6px;
+}
+
+.best-selling__new-price {
+  color: #333;
+  font-weight: bold;
+}

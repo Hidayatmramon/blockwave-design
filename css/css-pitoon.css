@@ -16011,28 +16011,36 @@ body.boxed-wrapper {
 }
 
 .card {
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
   color: white;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   height: 160px;
-  padding: 20px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  /* transition: transform 0.3s ease; */
 }
 
 .card span {
   font-size: 14px;
-  color: #ccc;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 6px;
+  color: #ffffff;
 }
 
 .card h3 {
   font-size: 18px;
   margin-top: 5px;
+  color: #fff;
+  padding: 4px;
+  font-weight: bold;
 }
 
 .card a {
@@ -16040,6 +16048,17 @@ body.boxed-wrapper {
   font-size: 14px;
   margin-top: 10px;
   text-decoration: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.card a:hover {
+  text-decoration: underline;
 }
 
 .featured {
@@ -16053,6 +16072,12 @@ body.boxed-wrapper {
   align-items: flex-end;
   padding: 20px;
   color: white;
+  transition: transform 0.3s ease;
+}
+
+.featured:hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
 .featured .overlay {
@@ -16064,18 +16089,40 @@ body.boxed-wrapper {
 .featured .overlay h2 {
   font-size: 22px;
   margin-bottom: 5px;
+  color: white;
 }
 
 .featured .overlay a {
-  color: #00ffcc;
-  font-weight: bold;
+  color: #00bfff;
+  font-size: 14px;
   text-decoration: none;
-  font-size: 16px;
+  margin-top: 10px;
+  display: inline-block;
 }
 
-@media (max-width: 768px) {
+.featured .overlay a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .card {
+    height: auto;
+    min-height: 180px;
+  }
+
   .featured {
-    height: 200px;
+    height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+  }
+
+  .featured .overlay h2 {
+    font-size: 18px;
   }
 }
 
@@ -16160,3 +16207,175 @@ body.boxed-wrapper {
   color: #333;
   font-weight: bold;
 }
+
+/* item price shop */
+.item-filter-price-container {
+  display: flex;
+  max-width: 1500px;
+  padding: 20px;
+  margin: auto;
+}
+
+.item-filter-price-sidebar {
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-right: 20px;
+  height: fit-content;
+}
+
+.item-filter-price-slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.item-filter-price-button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.item-filter-price-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.item-filter-price-list li {
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.item-filter-price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  flex: 1;
+}
+
+.item-filter-price-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.item-filter-price-card:hover {
+  transform: scale(1.02);
+}
+
+.item-filter-price-card img {
+  width: 100%;
+  display: block;
+}
+
+.item-filter-price-info {
+  padding: 12px;
+}
+
+.item-filter-price-info h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.item-filter-price-tags {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.item-filter-price-price {
+  font-size: 14px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+}
+
+.new-price {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* freemaps */
+
+/* slider */
+
+  /* Container utama */
+  .slider-freemaps {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .slider-freemaps .swiper-container {
+    padding: 20px 0;
+  }
+
+  .slider-freemaps .swiper-slide {
+    background: #f1f1f1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .slider-freemaps .swiper-slide:hover {
+    transform: translateY(-5px);
+  }
+
+  .slider-freemaps .slide-number {
+    background-color: red;
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .slider-freemaps .slide-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .slider-freemaps .view-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .slider-freemaps .view-button:hover {
+    background-color: #cc0000;
+  }
+
+  /* Navigasi (panah) */
+  .slider-freemaps .swiper-button-next,
+  .slider-freemaps .swiper-button-prev {
+    color: red;
+    display: none; /* Default disembunyikan */
+  }
+
+  .slider-freemaps:hover .swiper-button-next,
+  .slider-freemaps:hover .swiper-button-prev {
+    display: block;
+  }

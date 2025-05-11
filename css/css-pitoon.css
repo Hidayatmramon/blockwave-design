@@ -16011,28 +16011,36 @@ body.boxed-wrapper {
 }
 
 .card {
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
   color: white;
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   height: 160px;
+  padding: 10px;
   background-size: cover;
   background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 .card span {
   font-size: 14px;
-  color: #ccc;
+  width: 25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 6px;
+  color: #ffffff;
 }
 
 .card h3 {
   font-size: 18px;
   margin-top: 5px;
+  color: #fff;
+  padding: 4px;
+  font-weight: bold;
 }
 
 .card a {
@@ -16040,6 +16048,8 @@ body.boxed-wrapper {
   font-size: 14px;
   margin-top: 10px;
   text-decoration: none;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card:hover {
@@ -16079,6 +16089,7 @@ body.boxed-wrapper {
 .featured .overlay h2 {
   font-size: 22px;
   margin-bottom: 5px;
+  color: white;
 }
 
 .featured .overlay a {

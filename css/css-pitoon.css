@@ -16305,3 +16305,77 @@ body.boxed-wrapper {
   color: #27ae60;
   font-weight: bold;
 }
+
+/* freemaps */
+
+/* slider */
+
+  /* Container utama */
+  .slider-freemaps {
+    width: 100%;
+    max-width: 1200px;
+    margin: 50px auto;
+    position: relative;
+  }
+
+  .slider-freemaps .swiper-container {
+    padding: 20px 0;
+  }
+
+  .slider-freemaps .swiper-slide {
+    background: #f1f1f1;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .slider-freemaps .swiper-slide:hover {
+    transform: translateY(-5px);
+  }
+
+  .slider-freemaps .slide-number {
+    background-color: red;
+    color: white;
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .slider-freemaps .slide-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+  }
+
+  .slider-freemaps .view-button {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .slider-freemaps .view-button:hover {
+    background-color: #cc0000;
+  }
+
+  /* Navigasi (panah) */
+  .slider-freemaps .swiper-button-next,
+  .slider-freemaps .swiper-button-prev {
+    color: red;
+    display: none; /* Default disembunyikan */
+  }
+
+  .slider-freemaps:hover .swiper-button-next,
+  .slider-freemaps:hover .swiper-button-prev {
+    display: block;
+  }

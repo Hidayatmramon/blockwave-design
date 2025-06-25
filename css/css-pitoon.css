@@ -90,8 +90,8 @@
 # Common
 --------------------------------------------------------------*/
 :root {
-  --pitoon-font: 'Manrope', sans-serif;
-  --pitoon-font-two: 'Syne', sans-serif;
+  --pitoon-font: 'Poppins', sans-serif;
+  --pitoon-font-two: 'Poppins', sans-serif;
   --pitoon-gray: #757a7b;
   --pitoon-gray-rgb: 117, 122, 123;
   --pitoon-white: #ffffff;
@@ -119,7 +119,7 @@
 
 body {
   font-family: var(--pitoon-font);
-  color: var(--pitoon-gray);
+  color: var(--pitoon-black);
   font-size: 15px;
   line-height: 30px;
   font-weight: 500;
@@ -130,7 +130,7 @@ body.locked {
 }
 
 a {
-  color: var(--pitoon-gray);
+  color: var(--pitoon-black);
 }
 
 a,
@@ -7245,7 +7245,7 @@ ul {
 .testimonial-two {
   position: relative;
   display: block;
-  background-color: var(--pitoon-black);
+  background-color: var(--pitoon-blue);
   padding: 108px 0 182px;
   z-index: 1;
 }
@@ -13998,6 +13998,7 @@ ul {
   animation: my-animation405 19s linear infinite;
 }
 
+
 /* for Firefox */
 @-moz-keyframes my-animation404 {
   from {
@@ -14092,6 +14093,41 @@ ul {
   margin-left: 50px;
   top: 14px;
 }
+/* ====== Area Marquee dengan background bawah.png ====== */
+.marquee-infinite{
+  position: relative;
+  width: 100%;
+  height: 400px;                    /* sesuaikan tinggi */
+  overflow: hidden;
+  
+  /* gambar latar tetap di bawah deretan marquee */
+  background: #f3f3f3 center/cover no-repeat;
+}
+
+/* ====== Track gambar yang bergerak ====== */
+.container-infinite{
+  position: absolute;               /* agar di atas background */
+  inset: 0;                         /* penuhi seluruh area parent */
+  display: flex;
+  gap: 40px;                        /* jarak antar gambar */
+  animation: slide-left 25s linear infinite;
+}
+
+/* animasi geser */
+@keyframes slide-left{
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }  /* -50% karena gambar digandakan 2× */
+}
+
+/* ====== Styling untuk gambar ====== */
+.container-infinite img{
+  flex: 0 0 auto;
+  height: 100%;                     /* penuh tinggi frame */
+  width: auto;
+  user-select: none;
+  pointer-events: none;
+}
+
 
 /*--------------------------------------------------------------
 # Services Page

@@ -100,6 +100,7 @@
   /* --pitoon-base: #00b3ff; */
   --pitoon-base-rgb: 249, 190, 23;
   --pitoon-black: #000000;
+  --pitoon-blue: #089cf4;
   --pitoon-black-rgb: 4, 23, 26;
   --pitoon-primary: #f5f3ee;
   --pitoon-primary-rgb: 245, 243, 238;
@@ -808,7 +809,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   padding: 0 60px 0;
 }
 
@@ -978,6 +979,7 @@ ul {
   padding-top: 40px;
   padding-bottom: 40px;
   position: relative;
+  
 }
 
 .main-menu .main-menu__list>li+li,
@@ -999,6 +1001,9 @@ ul {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   font-weight: 500;
+      font-weight: bold;
+
+  
 }
 
 .main-menu .main-menu__list>li.current>a,
@@ -1007,6 +1012,7 @@ ul {
 .stricky-header .main-menu__list>li:hover>a {
   color: var(--pitoon-white);
   text-shadow: 1px 0 0 rgb(255 255 255 / 80%);
+  
 }
 
 .main-menu .main-menu__list>li>ul,
@@ -1149,6 +1155,7 @@ ul {
 .main-menu-two__main-menu-box .main-menu__list>.megamenu,
 .main-menu__wrapper .main-menu__list>.megamenu {
   position: static;
+  
 }
 
 .main-menu-three__main-menu-box .main-menu__list>.megamenu>ul,
@@ -1158,12 +1165,14 @@ ul {
   left: 0 !important;
   right: 0 !important;
   background-color: transparent;
+  
 }
 
 .main-menu-three__main-menu-box .main-menu__list>.megamenu>ul>li,
 .main-menu-two__main-menu-box .main-menu__list>.megamenu>ul>li,
 .main-menu__wrapper .main-menu__list>.megamenu>ul>li {
   padding: 0 !important;
+  
 }
 
 .stricky-header {
@@ -1688,7 +1697,7 @@ ul {
 }
 
 .stricky-header.main-menu-two {
-  background-color: var(--pitoon-black);
+  background-color: var(--pitoon-blue);
 }
 
 .main-menu-two__wrapper {
@@ -1701,7 +1710,7 @@ ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0px 1px 0px 0px rgba(255, 5, 5, 0.1);
+  box-shadow: 0px 30px 10px rgba(0, 0, 0, 0.1);
   padding: 0 60px 0;
 }
 
@@ -1713,13 +1722,16 @@ ul {
 
 .main-menu-two__logo {
   display: block;
-  margin-right: 165px;
+  margin-right: 300px;
   padding: 20px 0;
 }
 
 .main-menu-two__main-menu-box {
   display: block;
+  width: fit-content; /* atau width tertentu */
+  margin: 0 auto;
 }
+
 
 .main-menu-two__right {
   position: relative;
@@ -2552,6 +2564,8 @@ ul {
   background-color: var(--pitoon-black);
   z-index: 10;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .main-slider-two .item {
@@ -2568,12 +2582,12 @@ ul {
   left: 0;
   right: 0;
   bottom: 0;
+  background-image: url(slider/fix.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   mix-blend-mode: luminosity;
-  opacity: .50;
-  z-index: -1;
+  z-index: 0; /* Ubah dari -1 ke 0 */
 }
 
 .main-slider-two__shadow {
@@ -2644,28 +2658,31 @@ ul {
 
 .main-slider-two__sub-title {
   font-size: 18px;
-  color: var(--pitoon-base);
-  font-weight: 500;
+  color: var(--pitoon-white);
+  font-weight: 700;
   position: relative;
-  display: inline-block;
+  top: -95px; /* ✅ naikkan si p aja */
+  display: block;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateY(-120px);
   transform: translateY(-120px);
-  -webkit-transition-delay: 1000ms;
   transition-delay: 1000ms;
-  -webkit-transition: opacity 2000ms ease, -webkit-transform 2000ms ease;
-  transition: opacity 2000ms ease, -webkit-transform 2000ms ease;
   transition: transform 2000ms ease, opacity 2000ms ease;
-  transition: transform 2000ms ease, opacity 2000ms ease, -webkit-transform 2000ms ease;
+
+  text-align: center;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .main-slider-two__title {
   position: relative;
-  font-size: 90px;
+  font-size: 45px;
   color: var(--pitoon-white);
   font-weight: 600;
-  line-height: 100px;
+  line-height: 1.2; /* ganti dari 100px supaya baris tidak terlalu renggang */
   margin-top: 8px;
   margin-bottom: 100px;
   opacity: 0;
@@ -2678,6 +2695,14 @@ ul {
   transition: opacity 2000ms ease, -webkit-transform 2000ms ease;
   transition: transform 2000ms ease, opacity 2000ms ease;
   transition: transform 2000ms ease, opacity 2000ms ease, -webkit-transform 2000ms ease;
+
+  /* ✅ Tambahkan ini: */
+  text-align: center;
+  max-width: 800px;      /* Batasi lebar teks agar bisa wrap */
+  margin-left: auto;     /* Center */
+  margin-right: auto;    /* Center */
+  white-space: normal;   /* Izinkan teks pindah baris */
+  word-break: break-word; /* Jaga biar tidak keluar container */
 }
 
 .main-slider-two__title span {
@@ -5811,7 +5836,7 @@ ul {
 .site-footer {
   position: relative;
   display: block;
-  background-color: var(--pitoon-black);
+  background-color: var(--pitoon-blue);
   overflow: hidden;
   z-index: 1;
 }
@@ -5863,7 +5888,7 @@ ul {
 }
 
 .footer-widget__about-text {
-  color: #627174;
+  color: #ffffff;
 }
 
 .site-footer__social {
@@ -5960,7 +5985,7 @@ ul {
 
 .footer-widget__link-list li a {
   position: relative;
-  color: #627174;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 500;
   -webkit-transition: all 500ms ease;
@@ -5977,7 +6002,7 @@ ul {
 }
 
 .footer-widget__Contact-text {
-  color: #627174;
+  color: #ffffff;
 }
 
 .footer-widget__Contact-list {
@@ -6145,13 +6170,13 @@ ul {
 }
 
 .site-footer__bottom-text {
-  color: #627174;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 500;
 }
 
 .site-footer__bottom-text a {
-  color: #627174;
+  color: #ffffff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -6166,7 +6191,7 @@ ul {
 .about-two {
   position: relative;
   display: block;
-  padding: 120px 0 0;
+  /* padding: 120px 0 0; */
   z-index: 1;
 }
 
@@ -6727,7 +6752,7 @@ ul {
 .counter-one {
   position: relative;
   display: block;
-  padding: 100px 0 814px;
+  /* padding: 0px 0 814px; */
   background-color: var(--pitoon-primary);
   overflow: hidden;
   z-index: 1;
@@ -7032,9 +7057,16 @@ ul {
 .team-two {
   position: relative;
   display: block;
-  padding: 120px 0 90px;
+  /* padding: 120px 0 90px; */
   z-index: 1;
 }
+.rate {
+  position: relative;
+  display: block;
+  padding: 20px 0 30px;
+  z-index: 1;
+}
+
 
 .team-two__single {
   position: relative;
@@ -7199,6 +7231,13 @@ ul {
   margin-top: 3px;
   color: #627174;
 }
+.team-two__description {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+  text-align: center;
+}
+
 
 /*--------------------------------------------------------------
 # Testimonial Two
@@ -13924,13 +13963,28 @@ ul {
 .sliding-text {
   position: relative;
   display: block;
-  background-color: var(--pitoon-base);
+  height: 400px; /* pastikan tinggi cukup untuk gambar terlihat */
+  overflow: hidden; /* opsional */
 }
 
 .sliding-text__wrap {
   position: relative;
   display: block;
   padding: 23px 40px 29px;
+  z-index: 1; /* pastikan konten di atas background */
+}
+
+.sliding-text__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 1; /* atau 0.5 kalau mau semi transparan */
 }
 
 .sliding-text__list {

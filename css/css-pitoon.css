@@ -14102,6 +14102,7 @@ ul {
   
   /* gambar latar tetap di bawah deretan marquee */
   background: #f3f3f3 center/cover no-repeat;
+  background-color: #f3f3f3;
 }
 
 /* ====== Track gambar yang bergerak ====== */

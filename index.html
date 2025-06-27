@@ -66,6 +66,7 @@
     <!-- template styles -->
     <link rel="stylesheet" href="css/css-pitoon.css">
     <link rel="stylesheet" href="css/css-pitoon-responsive.css">
+    <link rel="stylesheet" href="css/css-slider.css">
 </head>
 
 <body class="custom-cursor">
@@ -141,21 +142,24 @@
 
         <!-- Main Sllider Start -->
         <section class="main-slider-two">
-            <div class="main-slider-two__carousel owl-carousel owl-theme thm-owl__carousel"
-                data-owl-options='{"loop": true, "items": 1, "navText": ["&lt;span class=\"icon-left-arrow\"&gt;&lt;/span&gt;","&lt;span class=\"icon-right-arrow\"&gt;&lt;/span&gt;"], "margin": 0, "dots": true, "nav": false, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
+            <div class="slider-wrapper">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
 
-                <div class="item main-slider-two__slide-1">
-                    <div class="main-slider-two__bg" style="background-image: url(slider/slider.png);">
-                    </div><!-- /.slider-one__bg -->
-                    <div class="container">
-                        <div class="main-slider-two__content">
-                            <h2 class="main-slider-two__title">it seems the waves brought you here and we're glad they
-                                did!</h2>
-                            <p class="main-slider-two__sub-title">Lets take a ride</p>
-                        </div>
-                    </div>
+                <div class="text-container">
+                    <h1 class="main-title">
+                        It seems the waves brought you here and we're glad they did!
+                    </h1>
+                    <p class="sub-title">
+                        Let's take a ride
+                    </p>
+                    <a href="#about">
+                        <svg width="80px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-            </div>
 
         </section>
 
@@ -190,7 +194,7 @@
         <!--Sliding Text Start -->
 
         <!--About Two Start -->
-        <section class="about-two">
+        <section class="about-two" id="about">
             <div class="about-two__shape-1">
                 <img src="images/shapes-about-two-shape-1.png" alt="">
             </div>

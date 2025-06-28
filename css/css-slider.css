@@ -1,0 +1,220 @@
+.main-slider-two {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide:nth-child(1) {
+  background-image: url("../slider/slider.png");
+  opacity: 1;
+  animation: slidePhaseA 15s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide:nth-child(2) {
+  background-image: url("../slider/slider.png");
+  animation: slidePhaseB 15s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide:nth-child(3) {
+  background-image: url("../slider/slider.png");
+  animation: slidePhaseC 15s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slidePhaseA {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  93.33% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slidePhaseB {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  33.33% {
+    opacity: 1;
+  }
+  63.33% {
+    opacity: 1;
+  }
+  66.67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidePhaseC {
+  0% {
+    opacity: 0;
+  }
+  63.33% {
+    opacity: 0;
+  }
+  66.67% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  93.33% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 900px;
+  padding: 20px;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  line-height: 1.2;
+  animation: fadeInUp 2s ease-out;
+}
+
+.sub-title {
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: 300;
+  margin-bottom: 40px;
+  animation: fadeInUp 2s ease-out 0.5s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 1024px) {
+  .main-title {
+    font-size: 3.5rem;
+  }
+  .sub-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+  }
+  .sub-title {
+    font-size: 1.5rem;
+  }
+  .text-container {
+    width: 95%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-title {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+  }
+  .sub-title {
+    font-size: 1.3rem;
+  }
+  .text-container {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .main-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  .sub-title {
+    font-size: 1.1rem;
+  }
+}
+
+.slide {
+  will-change: opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.slide {
+  animation-fill-mode: both;
+  animation-play-state: running;
+}
+
+.main-slider-two {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.slider-wrapper {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+#about {
+  scroll-margin-top: 150px;
+}

@@ -1,0 +1,161 @@
+.main-container {
+  display: flex;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.left-container {
+  flex: 0.8;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-heading {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.description {
+  font-size: 15px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.right-container {
+  flex: 2.2;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-img-bg-1 {
+  background-image: url("../slider/slider.png");
+  background-color: #87ceeb;
+}
+
+.about-img-bg-2 {
+  background-image: url("../slider/HappyNewYear.png");
+  background-color: #87ceeb;
+}
+
+.service-content {
+  padding: 18px;
+}
+
+.service-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.service-description {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.get-quote-btn {
+  background: none;
+  border: none;
+  color: var(--pitoon-blue);
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+}
+
+/* Scrollbar styling */
+.right-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-heading {
+    font-size: 28px;
+  }
+
+  .left-container {
+    flex: none;
+  }
+
+  .right-container {
+    flex: none;
+    max-height: 70vh;
+  }
+}

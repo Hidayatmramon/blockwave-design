@@ -66,6 +66,8 @@
     <!-- template styles -->
     <link rel="stylesheet" href="css/css-pitoon.css">
     <link rel="stylesheet" href="css/css-pitoon-responsive.css">
+    <link rel="stylesheet" href="css/css-slider.css">
+    <link rel="stylesheet" href="css/css-about.css">
 </head>
 
 <body class="custom-cursor">
@@ -103,28 +105,24 @@
                                     </li>
 
                                     <li class="dropdown">
-                                        <a href="freemaps.html">Store</a>
-
-                                    </li>
-                                    <li class="dropdown">
-                                        <a href="#">Blog</a>
+                                        <a href="shop.html">Store</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog.html">About us</a></li>
-                                            <li><a href="blog-sidebar.html">Blog Sidebar</a></li>
-                                            <li><a href="blog-details.html">Blog Details</a></li>
+                                            <li><a href="#">Build</a></li>
+                                            <li><a href="#">Model</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown">
-                                        <a href="shop.html">Portfolio</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="products.html">Products</a></li>
-                                            <li><a href="product-details.html">Product Details</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                        </ul>
+                                        <a href="#">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="#">Contact</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="portfolio.html">Portfolio</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Build</a></li>
+                                            <li><a href="#">Model</a></li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -141,26 +139,33 @@
 
         <!-- Main Sllider Start -->
         <section class="main-slider-two">
-            <div class="main-slider-two__carousel owl-carousel owl-theme thm-owl__carousel"
-                data-owl-options='{"loop": true, "items": 1, "navText": ["&lt;span class=\"icon-left-arrow\"&gt;&lt;/span&gt;","&lt;span class=\"icon-right-arrow\"&gt;&lt;/span&gt;"], "margin": 0, "dots": true, "nav": false, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
+            <div class="slider-wrapper">
+                <div class="slide"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
 
-                <div class="item main-slider-two__slide-1">
-                    <div class="main-slider-two__bg" style="background-image: url(slider/slider.png);">
-                    </div><!-- /.slider-one__bg -->
-                    <div class="container">
-                        <div class="main-slider-two__content">
-                            <h2 class="main-slider-two__title">it seems the waves brought you here and we're glad they
-                                did!</h2>
-                            <p class="main-slider-two__sub-title">Lets take a ride</p>
-                        </div>
-                    </div>
+                <div class="text-container">
+                    <h1 class="main-title">
+                        It seems the waves brought you here and we're glad they did!
+                    </h1>
+                    <p class="sub-title">
+                        Let's take a ride
+                    </p>
+                    <a href="#about">
+                        <svg width="80px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.5 8.25l-7.5 7.5-7.5-7.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
                 </div>
-            </div>
 
         </section>
 
-
-        <!--Main Sllider Start -->
+        <section class="sliding-text">
+            <div class="sliding-text__bg" style="background-image: url('slider/bawah.png');"></div>
+            <div class="sliding-text__wrap">
+                <!-- Konten sliding text di sini -->
+            </div>
+        </section>
         
 <!-- ================= Marquee dengan Background ================= -->
 <section class="marquee-infinite">        <!-- parent punya background -->
@@ -190,78 +195,87 @@
         <!--Sliding Text Start -->
 
         <!--About Two Start -->
-        <section class="about-two">
-            <div class="about-two__shape-1">
-                <img src="images/shapes-about-two-shape-1.png" alt="">
+
+        <section class="main-container" id="about">
+
+            <div class="left-container">
+                <div class="logo">
+                    <img src="slider/logo.svg" alt="Logo">
+                </div>
+                
+                <h1 class="main-heading">Lorem ipsum dolor sit amet.</h1>
+                
+                <p class="description">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur quo aliquam ut totam itaque veniam.
+                </p>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-3">
-                        <div class="about-two__left">
-                            <div class="about-two__img-box">
-                                <div class="about-two__img">
-                                    <img src="images/resources-about-two-img-1.jpg" alt="">
-                                </div>
-                                <div class="about-two__video-link">
-                                    <a href="https://www.youtube.com/watch?v=Get7rqXYrbQ" class="video-popup">
-                                        <div class="about-two__video-icon">
-                                            <span class="fa fa-play"></span>
-                                            <i class="ripple"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
+
+            <div class="right-container">
+                <div class="services-grid">
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-1"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, quae minus! Accusantium mollitia vel corrupti?.
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
                         </div>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="about-two__middle">
-                            <div class="section-title text-center">
-                                <div class="section-title__tagline-box">
-                                    <span class="section-title__tagline">get to know us</span>
-                                    <div class="section-title__icon-box-1">
-                                        <i class="fa fa-angle-left"></i>
-                                        <i class="fa fa-angle-left"></i>
-                                        <i class="fa fa-angle-left"></i>
-                                    </div>
-                                    <div class="section-title__icon-box-2">
-                                        <i class="fa fa-angle-right"></i>
-                                        <i class="fa fa-angle-right"></i>
-                                        <i class="fa fa-angle-right"></i>
-                                    </div>
-                                </div>
-                                <h2 class="section-title__title"> Why choose Blockwave Studios?</h2>
-                            </div>
-                            <div class="about-two__icon">
-                                <img src="slider/logo.svg" alt="" style="height: 5em;">
-                            </div>
-                            <p class="about-two__text-2">Blockwave Studios has been active since 2020 and officially
-                                established as a studios in 2023.
-                                We've worked with over 100+ clients including well-known content creators.
-                                Our services not just Building, we also offer 3D Modeling, Developer, and Minecraft
-                                Education.</p>
-                            <div class="about-two__btn-box">
-                                <a href="about.html" class="about-two__btn thm-btn">Discover More</a>
-                            </div>
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-2"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque dolores excepturi magni eos! Nemo.
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
                         </div>
                     </div>
-                    <div class="col-xl-3">
-                        <div class="about-two__right">
-                            <div class="about-two__img-box-2">
-                                <div class="about-two__img-2">
-                                    <img src="images/resources-about-two-img-2.jpg" alt="">
-                                </div>
-                                <div class="about-two__satisfied-box">
-                                    <div class="about-two__satisfied-icon-and-count">
-                                        <div class="about-two__satisfied-icon">
-                                            <span class="icon-good"></span>
-                                        </div>
-                                        <div class="about-two__satisfied-count">
-                                            <h3 class="odometer" data-count="37800">00</h3>
-                                        </div>
-                                    </div>
-                                    <p class="about-two__satisfied-text">Satisfied Customers</p>
-                                </div>
-                            </div>
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-1"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem dolore quisquam velit est iure nulla perspiciatis explicabo odit nemo voluptas?
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-2"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque dolores excepturi magni eos! Nemo.
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-1"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque dolores excepturi magni eos! Nemo.
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
+                        </div>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-image about-img-bg-2"></div>
+                        <div class="service-content">
+                            <h3 class="service-title">Lorem, ipsum.</h3>
+                            <p class="service-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque dolores excepturi magni eos! Nemo.
+                            </p>
+                            <button class="get-quote-btn">Get a quote ></button>
                         </div>
                     </div>
                 </div>

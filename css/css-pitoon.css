@@ -14102,6 +14102,7 @@ ul {
   
   /* gambar latar tetap di bawah deretan marquee */
   background: #f3f3f3 center/cover no-repeat;
+  background-color: #f3f3f3;
 }
 
 /* ====== Track gambar yang bergerak ====== */
@@ -16298,6 +16299,31 @@ body.boxed-wrapper {
   font-weight: bold;
 }
 
+.best-selling__price-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+.best-selling__price-section {
+    text-align: center;
+    padding: 2px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.best-selling__price-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.best-selling__price-values {
+    display: flex;
+    flex-direction: column;
+}
+
 /* item price shop */
 .item-filter-price-container {
   display: flex;
@@ -16394,6 +16420,31 @@ body.boxed-wrapper {
 .new-price {
   color: #27ae60;
   font-weight: bold;
+}
+
+.items__price-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+}
+
+.items__price-section {
+    text-align: center;
+    padding: 2px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.items__price-label {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.items__price-values {
+    display: flex;
+    flex-direction: column;
 }
 
 /* freemaps */
